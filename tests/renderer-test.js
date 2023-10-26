@@ -5,7 +5,7 @@ import td from 'testdouble';
 
 import Page from '../src/page';
 import Renderer from '../src/renderer';
-import PhantomRenderer from '../src/renderers/phantom';
+import ChromeRenderer from '../src/renderers/chrome';
 
 import INVALID_VALUES from './helpers/invalid-values';
 import testAsyncFunctionThrows from './helpers/test-async-function-throws';
@@ -25,8 +25,8 @@ describe('Renderer', function() {
         Renderer.rendererConstructor = undefined;
       });
 
-      it('defaults to phantom renderer', function() {
-        expect(Renderer.rendererConstructor).to.equal(PhantomRenderer);
+      it('defaults to Chrome renderer', function() {
+        expect(Renderer.rendererConstructor).to.equal(ChromeRenderer);
       });
     });
 
@@ -45,7 +45,7 @@ describe('Renderer', function() {
         });
 
         it('resets to default', function() {
-          expect(Renderer.rendererConstructor).to.equal(PhantomRenderer);
+          expect(Renderer.rendererConstructor).to.equal(ChromeRenderer);
         });
       });
     });

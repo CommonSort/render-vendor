@@ -6,29 +6,19 @@
     "node": ">=4.0.0"
   },
   "bin": {
-    "render-vendor": "./bin/render-vendor"
+    "render-vendor": "bin/render-vendor"
   },
   "main": "renderer.js",
   "scripts": {
     "build": "babel src -d .",
-    "lint": "./node_modules/.bin/eslint src",
+    "lint": "eslint src",
     "prepublish": "npm run build",
-    "test": "./node_modules/.bin/_mocha --compilers js:babel-register tests/*-test.js tests/**/*-test.js -t 5s"
+    "test": "_mocha --compilers js:babel-register tests/*-test.js tests/**/*-test.js -t 5s"
   },
-  "author": {
-    "name": "Aidan Nulman",
-    "email": "aidan@isleofcode.com",
-    "url": "https://isleofcode.com"
-  },
+  "author": "Aidan Nulman <aidan@isleofcode.com> (https://isleofcode.com)",
   "contributors": [
-    {
-      "name": "Alex Blom",
-      "email": "alex@isleofcode.com"
-    },
-    {
-      "name": "Sam Power",
-      "email": "sam@commonsort.com"
-    }
+    "Alex Blom <alex@isleofcode.com>",
+    "Sam Power <sam@commonsort.com>"
   ],
   "license": "LGPL-3.0",
   "devDependencies": {
@@ -74,5 +64,8 @@
   "bugs": {
     "url": "https://github.com/commonsort/render-vendor/issues"
   },
-  "homepage": "https://github.com/commonsort/render-vendor"
+  "homepage": "https://github.com/commonsort/render-vendor",
+  "directories": {
+    "test": "tests"
+  }
 }
