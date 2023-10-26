@@ -121,7 +121,7 @@ export class ChromeRenderer extends Renderer {
       type = isString(filepath) ? path.extname(filepath).slice(1) : 'html';
       type = type.length > 0 ? type : 'html';
     }
-  
+
     if (waitForNavigation !== null && waitForNavigation !== undefined) {
       if (waitForNavigation === false) {
         return;
